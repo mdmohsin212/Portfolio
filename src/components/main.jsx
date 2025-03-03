@@ -6,7 +6,7 @@ const Main = () => {
       <div>
         <div className="p-2 mt-4">
           <h2 className="text-center my-5">preferred tech-stack</h2>
-          <div class="gap-5 d-flex flex-wrap justify-content-center">
+          <div class="gap-5 d-flex flex-wrap justify-content-center lan">
             <img src="./images/python.svg" />
             <img src="./images/django.svg" />
             <img src="./images/svg.svg" />
@@ -15,7 +15,7 @@ const Main = () => {
         </div>
         <div className="p-2">
           <h2 className="text-center my-5">Also I love</h2>
-          <div class="gap-5 d-flex flex-wrap justify-content-center">
+          <div class="gap-5 d-flex flex-wrap justify-content-center lan">
             <img src="./images/c.svg" />
             <img src="./images/cc.svg" />
             <img src="./images/html.svg" />
@@ -26,7 +26,7 @@ const Main = () => {
         </div>
         <div className="p-2">
           <h2 className="text-center my-5">Tools</h2>
-          <div class="gap-5 d-flex flex-wrap justify-content-center">
+          <div class="gap-5 d-flex flex-wrap justify-content-center lan">
             <img src="./images/vs.svg" />
             <img src="./images/charm.svg" />
             <img src="./images/chrome.svg" />
@@ -34,7 +34,7 @@ const Main = () => {
         </div>
         <div className="p-2">
           <h2 className="text-center my-5">Version Control</h2>
-          <div class="gap-5 d-flex flex-wrap justify-content-center">
+          <div class="gap-5 d-flex flex-wrap justify-content-center lan">
             <img src="./images/git.svg" />
             <img src="./images/hub.svg" />
           </div>

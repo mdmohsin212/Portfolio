@@ -103,7 +103,7 @@ const Nav = () => {
         <div className="row">
           <div className="col-sm-12 col-md-8 order-2 order-md-1 pe-5">
             <h1>
-              HI, I'M MD <span className="text-info">MOHSIN</span> <br /> and i
+              HI, I'M MD <span className="text-info">MOHSIN</span> <br /> and I
               am a passionate
             </h1>
             <div style={{ minHeight: "40px" }}>

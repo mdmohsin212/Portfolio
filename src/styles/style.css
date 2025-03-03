@@ -15,15 +15,31 @@
     background-color: rgb(239, 239, 239);
 }
 
+#message{
+    color: black !important;
+}
+
+#Name{
+    color: black !important;
+}
+
+#Email{
+    color: black !important;
+}
+
+.lan{
+    transition: all 0.2s ease-in-out;
+}
+.lan:hover{
+    transform: scale(1.05);
+}
+
 @media (min-width: 768px){
     .img{
         width: 450px;
     }
     .contact{
         width: 400px;
-        margin-left: 330px;
-    }
-    .cnt{
-        margin-right: 300px;
+        margin-left: 150px;
     }
 }
