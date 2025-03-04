@@ -1,15 +1,12 @@
 import React from "react";
-import Nav from './../components/nav';
-import Main from './../components/main';
+import Hero from './../components/hero';
 import Footer from './../components/Footer';
-import Contact from './../components/Contact';
+import '../App.css'
 
 const Home = () => {
   return (
-    <div>
-      <Nav />
-      <Main />
-      <Contact />
+    <div className="">
+      <Hero />
       <Footer />
     </div>
   );

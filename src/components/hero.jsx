@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import Typed from "typed.js";
 import "font-awesome/css/font-awesome.min.css";
 import "../styles/style.css"
+import Main from './main';
+import Contact from './Contact';
+import { scrollSkill, scrollProject } from './app';
+import Project from './Project';
 
-const Nav = () => {
-    const [theme, setTheme] = useState("dark");
+const Hero = () => {
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
     useEffect(() => {
       document.body.dataset.bsTheme = theme;
+      localStorage.setItem("theme", theme);
     }, [theme]);
     
     const toggleTheme = () => {
@@ -39,7 +44,7 @@ const Nav = () => {
     <div>
       <nav className="navbar navbar-expand-lg py-3 px-4">
         <div className="container-fluid">
-          <h2>Protfolio</h2>
+          <h2>Portfolio</h2>
           <button
             className="navbar-toggler"
             type="button"
@@ -52,19 +57,19 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-around gap-4 fs-5">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-around gap-4 fs-5 text-center">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" onClick={scrollSkill}>
                   Skills
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" onClick={scrollProject}>
                   Project
                 </a>
               </li>
@@ -72,25 +77,29 @@ const Nav = () => {
                 <a
                   href="./images/m.pdf"
                   className="btn btn-info p-2"
-                  download=""
+                  download
                 >
                   Resume <i className="fa fa-download"></i>
                 </a>
               </li>
               <li>
-                <div className="d-flex">
-                  <div>
-                    <p>Dark Mode</p>
-                  </div>
-                  <div className="form-check form-switch mx-4">
-                    <input
-                      className="form-check-input p-2"
-                      type="checkbox"
-                      role="switch"
-                      id="flexSwitchCheckChecked"
-                      checked={theme === "dark"}
-                      onChange={toggleTheme}
-                    />
+                <div className="d-flex align-items-center justify-content-center">
+                  <div className="mx-1">
+                    {theme === "dark" ? (
+                      <img
+                        src="/images/moon.svg"
+                        alt=""
+                        onClick={toggleTheme}
+                        style={{ width: "24px", cursor: "pointer" }}
+                      />
+                    ) : (
+                      <img
+                        src="/images/dark-moon.svg"
+                        alt=""
+                        onClick={toggleTheme}
+                        style={{ width: "24px", cursor: "pointer" }}
+                      />
+                    )}
                   </div>
                 </div>
               </li>
@@ -161,16 +170,24 @@ const Nav = () => {
             </div>
           </div>
           <div className="col-sm-12 col-md-4 order-1 order-md-2 text-center">
-            <img
-              className="mb-3 img"
-              src="./images/siam.png"
-              alt="Profile"
-            />
+            <img className="mb-3 img" src="./images/siam.png" alt="Profile" />
           </div>
         </div>
+      </div>
+
+      <div id="main-target">
+        <Main />
+      </div>
+
+      <div id="project-target">
+        <Project />
+      </div>
+
+      <div id="contact-target">
+        <Contact />
       </div>
     </div>
   );
 };
 
-export default Nav;
+export default Hero;
