@@ -25,7 +25,7 @@ const Hero = () => {
       const typed = new Typed(el.current, {
         strings: [
           "Backend Developer | Django &amp; DRF",
-          "Expert in MySQL &amp; Django Channels",
+          "Expert in MySQL",
           "Building Scalable APIs",
         ],
         typeSpeed: 50,
@@ -74,11 +74,7 @@ const Hero = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  href="./images/m.pdf"
-                  className="btn btn-info p-2"
-                  download
-                >
+                <a href="./images/m.pdf" className="btn btn-info p-2" download>
                   Resume <i className="fa fa-download"></i>
                 </a>
               </li>
@@ -132,6 +128,17 @@ const Hero = () => {
                 seamless user experiences.
               </p>
             </div>
+
+            {/* <div className="py-4">
+              <h4>
+                <i class="fa fa-graduation-cap fs-3 me-2"></i>
+                Computer Science & Technology
+              </h4>
+              <h4>
+                <i class="fa fa-university fs-3 me-2"></i>
+                Narayanganj Polytechnic Institute
+              </h4>
+            </div> */}
 
             <div className="d-flex gap-4 align-items-center fs-4">
               <a

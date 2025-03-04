@@ -5,7 +5,7 @@ import '../App.css'
 
 const Home = () => {
   return (
-    <div className="">
+    <div>
       <Hero />
       <Footer />
     </div>

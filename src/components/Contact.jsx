@@ -1,9 +1,13 @@
 import React from "react";
 import "../styles/style.css";
+import { HandelContact } from './app';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   return (
     <div className="pt-5 p-3">
+      <ToastContainer position="top-center" />
       <div className="row justify-content-center align-items-center">
         <div className="col-lg-4 col-md-4 col-12">
           <form className="p-4 rounded bg contact">
@@ -37,7 +41,8 @@ const Contact = () => {
             </div>
             <div className="text-center">
               <button
-                className="my-2 px-4 w-75 btn btn-dark" type="submit"
+                className="my-2 px-4 w-75 btn btn-dark"
+                onClick={HandelContact}
               >
                 Send
               </button>
