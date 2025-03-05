@@ -7,6 +7,7 @@ import Contact from './Contact';
 import { scrollSkill, scrollProject } from './app';
 import Project from './Project';
 
+
 const Hero = () => {
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
