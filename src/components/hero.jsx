@@ -8,6 +8,7 @@ import Project from './Project';
 import Competitive from './competive';
 import Skills from './Skills';
 
+
 const Hero = () => {
     useEffect(() => {
       document.body.dataset.bsTheme = "dark";
