@@ -2,25 +2,18 @@ import React, { useState, useEffect } from "react";
 import Typed from "typed.js";
 import "font-awesome/css/font-awesome.min.css";
 import "../styles/style.css"
-import Main from './main';
 import Contact from './Contact';
 import { scrollSkill, scrollProject } from './app';
 import Project from './Project';
+import Competitive from './competive';
+import Skills from './Skills';
 
 const Hero = () => {
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-
     useEffect(() => {
-      document.body.dataset.bsTheme = theme;
-      localStorage.setItem("theme", theme);
-    }, [theme]);
-    
-    const toggleTheme = () => {
-      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-    };
-
+      document.body.dataset.bsTheme = "dark";
+    }, []);
+  
     const el = React.useRef(null);
-
     useEffect(() => {
       const typed = new Typed(el.current, {
         strings: [
@@ -44,7 +37,7 @@ const Hero = () => {
     <div>
       <nav className="navbar navbar-expand-lg py-3 px-4">
         <div className="container-fluid">
-          <h2>Portfolio</h2>
+          <h2>Mohsin</h2>
           <button
             className="navbar-toggler"
             type="button"
@@ -78,27 +71,6 @@ const Hero = () => {
                   Resume <i className="fa fa-download"></i>
                 </a>
               </li>
-              <li>
-                <div className="d-flex align-items-center justify-content-center">
-                  <div className="mx-1">
-                    {theme === "dark" ? (
-                      <img
-                        src="/images/moon.svg"
-                        alt=""
-                        onClick={toggleTheme}
-                        style={{ width: "24px", cursor: "pointer" }}
-                      />
-                    ) : (
-                      <img
-                        src="/images/dark-moon.svg"
-                        alt=""
-                        onClick={toggleTheme}
-                        style={{ width: "24px", cursor: "pointer" }}
-                      />
-                    )}
-                  </div>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
@@ -128,18 +100,6 @@ const Hero = () => {
                 seamless user experiences.
               </p>
             </div>
-
-            {/* <div className="py-4">
-              <h4>
-                <i class="fa fa-graduation-cap fs-3 me-2"></i>
-                Computer Science & Technology
-              </h4>
-              <h4>
-                <i class="fa fa-university fs-3 me-2"></i>
-                Narayanganj Polytechnic Institute
-              </h4>
-            </div> */}
-
             <div className="d-flex gap-4 align-items-center fs-4">
               <a
                 href="https://github.com/mdmohsin212/"
@@ -183,7 +143,11 @@ const Hero = () => {
       </div>
 
       <div id="main-target">
-        <Main />
+        <Skills />
+      </div>
+
+      <div>
+        <Competitive />
       </div>
 
       <div id="project-target">
