@@ -41,7 +41,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="container mt-5">
+    <div className="mt-5">
       <h2 className="text-center fw-bold">Projects</h2>
       <p className="text-muted text-center">
         Showcasing my latest work and contributions.
@@ -50,7 +50,7 @@ const Project = () => {
 
       <div className="d-flex flex-wrap justify-content-center pt-4 gap-4">
         {projects.map((project, index) => (
-          <div key={index} className="card col-md-5 col-12 shadow-lg border">
+          <div key={index} className="card col-md-4 px-md-0 px-2 col-12 shadow-lg border">
             <div className="row g-0">
               <div className="col-lg-12">
                 <div

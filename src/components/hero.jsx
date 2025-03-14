@@ -1,44 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import "font-awesome/css/font-awesome.min.css";
-import "../styles/style.css"
-import Contact from './Contact';
-import { scrollSkill, scrollProject } from './app';
-import Project from './Project';
-import Competitive from './competive';
-import Skills from './Skills';
-
+import "../styles/style.css";
+import Contact from "./Contact";
+import { scrollSkill, scrollProject } from "./app";
+import Project from "./Project";
+import Competitive from "./competive";
+import Skills from "./Skills";
 
 const Hero = () => {
-    useEffect(() => {
-      document.body.dataset.bsTheme = "dark";
-    }, []);
-  
-    const el = React.useRef(null);
-    useEffect(() => {
-      const typed = new Typed(el.current, {
-        strings: [
-          "Backend Developer | Django &amp; DRF",
-          "Expert in MySQL",
-          "Building Scalable APIs",
-        ],
-        typeSpeed: 50,
-        backSpeed: 25,
-        backDelay: 1000,
-        loop: true,
-      });
+  useEffect(() => {
+    document.body.dataset.bsTheme = "dark";
+  }, []);
 
-      return () => {
-        typed.destroy();
-      };
-    }, []);
+  const el = useRef(null);
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        "Backend Developer | Django &amp; DRF",
+        "Expert in MySQL",
+        "Building Scalable APIs",
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      backDelay: 1000,
+      loop: true,
+    });
 
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg py-3 px-4">
+    <div className="">
+      <nav className="navbar navbar-expand-lg py-3 px-5">
         <div className="container-fluid">
-          <h2>Mohsin</h2>
+          <h2 className="fw-bold">Mohsin</h2>
           <button
             className="navbar-toggler"
             type="button"
@@ -51,9 +49,9 @@ const Hero = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-around gap-4 fs-5 text-center">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-4 fs-5 text-center">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" href="#">
                   Home
                 </a>
               </li>
@@ -64,12 +62,16 @@ const Hero = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" onClick={scrollProject}>
-                  Project
+                  Projects
                 </a>
               </li>
               <li className="nav-item">
-                <a href="./images/m.pdf" className="btn btn-info p-2" download>
-                  Resume <i className="fa fa-download"></i>
+                <a
+                  href="./images/mohsin.pdf"
+                  className="btn btn-info px-3 py-2"
+                  download
+                >
+                  <i className="fa fa-download me-2"></i> Resume
                 </a>
               </li>
             </ul>
@@ -77,16 +79,16 @@ const Hero = () => {
         </div>
       </nav>
 
-      <div className="px-4 text-start pt-5 mt-5">
-        <div className="row">
-          <div className="col-sm-12 col-md-8 order-2 order-md-1 pe-5">
-            <h1>
-              HI, I'M MD <span className="text-info">MOHSIN</span> <br /> and I
-              am a passionate
+      <div className="px-5 text-start pt-5 mt-5">
+        <div className="row align-items-center">
+          <div className="col-sm-12 col-md-8 order-2 order-md-1 pe-md-5">
+            <h1 className="fw-bold display-4">
+              Hi, I'm <span className="text-info">Md Mohsin</span>
             </h1>
-            <div style={{ minHeight: "40px" }}>
-              <span ref={el} className="fs-4 text-info" />
-            </div>
+            <h2 className="fs-2">
+              A Passionate{" "}
+              <span ref={el} className="fs-4 text-info fw-semibold" />
+            </h2>
 
             <div className="mt-4">
               <p className="fs-5">
@@ -101,44 +103,46 @@ const Hero = () => {
                 seamless user experiences.
               </p>
             </div>
-            <div className="d-flex gap-4 align-items-center fs-4">
+
+            <div className="d-flex gap-4 align-items-center fs-4 mt-4">
               <a
                 href="https://github.com/mdmohsin212/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fa fa-github fs-3"
-                  style={{ color: "#74C0FC" }}
-                ></i>
+                <i className="fa fa-github fs-3"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/mohsin416/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fa fa-linkedin fs-3"
-                  style={{ color: "#74C0FC" }}
-                ></i>
+                <i className="fa fa-linkedin fs-3"></i>
               </a>
               <a
                 href="https://www.facebook.com/mohsin.siam6"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i
-                  className="fa fa-facebook fs-3"
-                  style={{ color: "#74C0FC" }}
-                ></i>
+                <i className="fa fa-facebook fs-3"></i>
               </a>
-              <a href="./images/m.pdf" className="btn btn-info p-2" download>
-                Resume <i className="fa fa-download"></i>
+              <a
+                href="./images/mohsin.pdf"
+                className="btn btn-info px-3 py-2"
+                download
+              >
+                <i className="fa fa-download me-2"></i> Resume
               </a>
             </div>
           </div>
+
           <div className="col-sm-12 col-md-4 order-1 order-md-2 text-center">
-            <img className="mb-3 img" src="./images/siam.png" alt="Profile" />
+            <img
+              className="mb-3 img-fluid rounded-circle shadow-lg"
+              src="./images/siam.png"
+              alt="Profile"
+              style={{ maxWidth: "250px", border: "4px solid #0DCAF0" }}
+            />
           </div>
         </div>
       </div>
@@ -146,15 +150,12 @@ const Hero = () => {
       <div id="main-target">
         <Skills />
       </div>
-
       <div>
         <Competitive />
       </div>
-
       <div id="project-target">
         <Project />
       </div>
-
       <div id="contact-target">
         <Contact />
       </div>
