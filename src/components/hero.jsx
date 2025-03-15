@@ -17,9 +17,9 @@ const Hero = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
+        "Software Engineer &amp; Python Developer",
         "Backend Developer | Django &amp; DRF",
         "Expert in MySQL",
-        "Building Scalable APIs",
       ],
       typeSpeed: 50,
       backSpeed: 25,
@@ -33,7 +33,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="container">
       <nav className="navbar navbar-expand-lg py-3 px-5">
         <div className="container-fluid">
           <h2 className="fw-bold">Mohsin</h2>
@@ -82,15 +82,21 @@ const Hero = () => {
       <div className="px-5 text-start pt-5 mt-5">
         <div className="row align-items-center">
           <div className="col-sm-12 col-md-8 order-2 order-md-1 pe-md-5">
-            <h1 className="fw-bold display-4">
+            <h1 className="fw-bold display-4 pt-4">
               Hi, I'm <span className="text-info">Md Mohsin</span>
             </h1>
             <h2 className="fs-2">
-              A Passionate{" "}
-              <span ref={el} className="fs-4 text-info fw-semibold" />
+              <span ref={el} className="fs-4" />
             </h2>
 
             <div className="mt-4">
+              <p className="fs-5">
+                I am a Backend Developer specializing in scalable
+                architectures, optimized databases, and high-performance web
+                applications using Django and DRF.🔥
+              </p>
+            </div>
+            {/* <div className="mt-4">
               <p className="fs-5">
                 I am currently pursuing a Diploma in Computer Science &
                 Technology at Narayanganj Polytechnic Institute. With a strong
@@ -102,7 +108,7 @@ const Hero = () => {
                 experience developing responsive web interfaces to ensure
                 seamless user experiences.
               </p>
-            </div>
+            </div> */}
 
             <div className="d-flex gap-4 align-items-center fs-4 mt-4">
               <a
@@ -141,7 +147,7 @@ const Hero = () => {
               className="mb-3 img-fluid rounded-circle shadow-lg"
               src="./images/siam.png"
               alt="Profile"
-              style={{ maxWidth: "250px", border: "4px solid #0DCAF0" }}
+              style={{ maxWidth: "340px", border: "4px solid #0DCAF0" }}
             />
           </div>
         </div>

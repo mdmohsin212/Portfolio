@@ -1,12 +1,20 @@
 import React from "react";
-
+import { CheckCircle, Code, Github, ExternalLink } from "lucide-react";
+  
 const projects = [
   {
-    id: "carouselExample1",
+    id: "project1",
     name: "NextHire - A Job Finding Platform",
     description:
       "NextHire is a job-finding platform that helps people connect with the right job opportunities easily and quickly.",
-    images: ["proj11.png", "proj12.png", "proj14.png", "proj15.png"],
+    images: ["proj11.png"],
+    features: [
+      "User Authentication: Signup, confirm email, and log in.",
+      "Job Management: Employers post, track, and manage jobs.",
+      "Candidate Handling: View applicants, assign tasks, approve/reject.",
+      "Job Applications: Seekers apply, track, and submit details.",
+    ],
+
     backend: "https://github.com/mdmohsin212/NextHire-Backend",
     frontend: "https://github.com/mdmohsin212/NextHire-Frontend",
     live: "https://nexthire-frontend.vercel.app/",
@@ -17,24 +25,34 @@ const projects = [
       "Bootstrap",
       "CSS",
       "JavaScript",
+      "JWT",
     ],
   },
   {
-    id: "carouselExample2",
+    id: "project2",
     name: "SnapBuy - An Ecommerce Platform",
     description:
       "SnapBuy is a fast and user-friendly eCommerce platform designed for seamless online shopping and secure transactions.",
-    images: ["proj21.png", "proj22.png", "proj24.png", "proj25.png"],
+    images: ["proj21.png"],
+    features: [
+      "Account Access: Register, verify, and log in.",
+      "Shopping Experience: Browse products, add to cart, and checkout securely.",
+      "Orders: Track status and update shipping.",
+      "Admin: Manage products, orders, and stats.",
+    ],
+
     backend: "https://github.com/mdmohsin212/SnapBuy-Backend",
     frontend: "https://github.com/mdmohsin212/SnapBuy-Frontend",
     live: "https://snapbuy-frontend.vercel.app/",
     technologies: [
       "Django Rest API",
       "React",
+      "SSLCommerz",
       "PostgreSQL",
       "Bootstrap",
       "CSS",
       "JavaScript",
+      "JWT",
     ],
   },
 ];
@@ -50,55 +68,65 @@ const Project = () => {
 
       <div className="d-flex flex-wrap justify-content-center pt-4 gap-4">
         {projects.map((project, index) => (
-          <div key={index} className="card col-md-4 px-md-0 px-2 col-12 shadow-lg border">
+          <div
+            key={index}
+            className="card col-md-5 px-md-0 px-2 col-12 shadow-lg border"
+          >
             <div className="row g-0">
               <div className="col-lg-12">
-                <div
-                  id={project.id}
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-inner">
-                    {project.images.map((img, idx) => (
-                      <div
-                        key={idx}
-                        className={`carousel-item ${idx === 0 ? "active" : ""}`}
-                      >
-                        <img
-                          src={`./images/${img}`}
-                          className="d-block w-100 rounded-top"
-                          alt={project.name}
-                          style={{ height: "280px" }}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target={`#${project.id}`}
-                    data-bs-slide="prev"
-                  >
-                    <span className="carousel-control-prev-icon"></span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target={`#${project.id}`}
-                    data-bs-slide="next"
-                  >
-                    <span className="carousel-control-next-icon"></span>
-                  </button>
-                </div>
+                <img
+                  src={`./images/${project.images[0]}`}
+                  className="d-block w-100 rounded-top"
+                  alt={project.name}
+                  style={{ height: "280px" }}
+                />
               </div>
 
               <div className="col-lg-12 p-4">
                 <div className="card-body">
-                  <h5 className="card-title fw-bold">{project.name}</h5>
+                  <h4 className="card-title fw-bold">{project.name}</h4>
                   <p className="text-muted">{project.description}</p>
 
-                  <div className="d-flex flex-column">
-                    <div className="d-flex align-items-center pt-2">
+                  <div>
+                    {project.features && (
+                      <div>
+                        <h5>
+                          <CheckCircle
+                            className="me-2 text-primary"
+                            size={20}
+                          />
+                          Key Features:
+                        </h5>
+                        <ul>
+                          {project.features.map((feature, i) => (
+                            <li key={i} className="text-muted">
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="mt-3">
+                    <h4>
+                      <Code className="me-2 text-success" size={20} />
+                      Used Technologies:
+                    </h4>
+                    <div className="d-flex flex-wrap gap-2">
+                      {project.technologies.map((tech, i) => (
+                        <button
+                          key={i}
+                          className="badge bg-light text-dark px-3 py-2"
+                        >
+                          {tech}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="d-flex flex-column flex-md-row gap-2 gap-md-5 justify-content-md-center text-center text-md-start">
+                    <div className="d-flex align-items-center pt-3">
                       <h6 className="m-0">Backend:</h6>
                       <a
                         href={project.backend}
@@ -136,17 +164,6 @@ const Project = () => {
                         />
                       </a>
                     </div>
-                  </div>
-
-                  <div className="mt-3">
-                    {project.technologies.map((tech, i) => (
-                      <button
-                        key={i}
-                        className="btn btn-dark text-white m-1 btn-sm"
-                      >
-                        {tech}
-                      </button>
-                    ))}
                   </div>
                 </div>
               </div>

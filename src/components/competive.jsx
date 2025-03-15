@@ -45,7 +45,7 @@ const Competitive = () => {
 
           <div className="row justify-content-center gap-3">
             {achievements.map((item, index) => (
-              <div key={index} className="col-md-3 col-11">
+              <div key={index} className="col-md-3 col-11 lan">
                 <a href={item.link} className="text-decoration-none">
                   <div
                     className="card bg-dark text-light text-center border-light p-3"

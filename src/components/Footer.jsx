@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="text-center mt-4">
       <hr />
       <p>Copyright © 2025 | Md Mohsin</p>
-      <p>Narayanganj , Dhaka</p>
+      <p>Narayanganj, Dhaka</p>
       <div className="d-flex gap-4 justify-content-center align-items-center fs-4">
         <a
           href="https://github.com/mdmohsin212/"
