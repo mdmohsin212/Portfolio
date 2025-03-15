@@ -30,7 +30,7 @@ const Competitive = () => {
 
     return (
       <div>
-        <div className="container my-5">
+        <div className="container my-1">
           <h2 className="text-center text-light fw-bold">
             🚀 Competitive Programming
           </h2>

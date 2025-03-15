@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-lg py-3 px-5">
+      <nav className="navbar navbar-expand-lg py-3">
         <div className="container-fluid">
           <h2 className="fw-bold">Mohsin</h2>
           <button
@@ -69,7 +69,7 @@ const Hero = () => {
                 <a
                   href="./images/mohsin.pdf"
                   className="btn btn-info px-3 py-2"
-                  download
+                  target="_blank"
                 >
                   <i className="fa fa-download me-2"></i> Resume
                 </a>
@@ -79,7 +79,7 @@ const Hero = () => {
         </div>
       </nav>
 
-      <div className="px-5 text-start pt-5 mt-5">
+      <div className="text-start pt-5 mt-5">
         <div className="row align-items-center">
           <div className="col-sm-12 col-md-8 order-2 order-md-1 pe-md-5">
             <h1 className="fw-bold display-4 pt-4">
@@ -91,24 +91,11 @@ const Hero = () => {
 
             <div className="mt-4">
               <p className="fs-5">
-                I am a Backend Developer specializing in scalable
-                architectures, optimized databases, and high-performance web
-                applications using Django and DRF.🔥
+                I am a Backend Developer specializing in scalable architectures,
+                optimized databases, and high-performance web applications using
+                Django and DRF.🔥
               </p>
             </div>
-            {/* <div className="mt-4">
-              <p className="fs-5">
-                I am currently pursuing a Diploma in Computer Science &
-                Technology at Narayanganj Polytechnic Institute. With a strong
-                foundation in problem-solving, I have tackled challenges on
-                platforms like Codeforces, CodeChef and leetcode, primarily
-                using C++. As a backend developer, I specialize in Django and
-                DRF, focusing on building scalable and efficient REST APIs.
-                While I primarily work on backend technologies, I also have
-                experience developing responsive web interfaces to ensure
-                seamless user experiences.
-              </p>
-            </div> */}
 
             <div className="d-flex gap-4 align-items-center fs-4 mt-4">
               <a
@@ -135,7 +122,7 @@ const Hero = () => {
               <a
                 href="./images/mohsin.pdf"
                 className="btn btn-info px-3 py-2"
-                download
+                target="_blank"
               >
                 <i className="fa fa-download me-2"></i> Resume
               </a>
@@ -151,6 +138,24 @@ const Hero = () => {
             />
           </div>
         </div>
+      </div>
+
+      <div className="container py-3">
+        <h2 className="text-center mb-4">About Me</h2>
+        <p className="fs-5">
+          I am a results-driven Backend Developer with expertise in Django,
+          Django REST Framework, and database optimization. My focus is on
+          building scalable, high-performance applications with clean
+          architecture and efficient API design. With strong problem-solving
+          skills, I specialize in optimizing database queries, implementing
+          secure authentication, and ensuring seamless backend performance.
+        </p>
+        <p className="fs-5">
+          Passionate about innovation and efficiency, I continuously refine my
+          skills to deliver robust and scalable solutions. Whether designing
+          complex systems or solving challenging backend issues, I am committed
+          to delivering excellence.
+        </p>
       </div>
 
       <div id="main-target">
